@@ -9,90 +9,125 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background: #fff;
+            font-family: "Open Sans", Arial, sans-serif;
+            background: #f5f5f5;
             color: #1f2042;
-            text-rendering: optimizeLegibility;
         }
 
         header {
             background: #1f2042;
             color: #fff;
-            padding: 20px 40px;
-            font-size: 24px;
+            padding: 25px;
+            font-size: 28px;
             font-weight: 600;
-        }
-
-        .hero {
-            padding: 80px 40px;
             text-align: center;
-            background: #f5f5f5;
         }
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-        .hero p {
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .summary-box {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .summary-box div {
+            margin: 10px 0;
             font-size: 18px;
-            opacity: 0.8;
         }
 
-        .content {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
-            line-height: 1.6em;
-        }
-
-        footer {
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 30px;
             background: #1f2042;
             color: #fff;
-            padding: 20px 40px;
-            text-align: center;
-            margin-top: 60px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2a2b55;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        PassportParking
-    </header>
+<header>
+    Passport Parking
+</header>
 
-    <section class="hero">
-        <h1>Welcome to PassportParking</h1>
-        <p>Your digital gateway for secure parking access, identity verification, and location services.</p>
-    </section>
+<div class="container">
 
-    <section class="content">
-        <h2>About PassportParking</h2>
-        <p>
-            PassportParking is designed to streamline access, improve security, and simplify the way you interact 
-            with parking environments. Whether you're managing a facility or just looking for a smarter way to park, 
-            PassportParking provides the tools you need.
-        </p>
+    <h2>Start Parking Session</h2>
+    <p>Enter the Zone Number on signs or meter decals to start a parking session.</p>
 
-        <h2>Features</h2>
-        <ul>
-            <li>Smart identity verification</li>
-            <li>Secure digital access</li>
-            <li>Real-time parking availability</li>
-            <li>Mobile-friendly interface</li>
-        </ul>
+    <!-- Zone Number -->
+    <label>Zone Number</label>
+    <input type="text" placeholder="">
 
-        <h2>Get Started</h2>
-        <p>
-            This is your starter website. You can expand it with login systems, dashboards, maps, or anything else 
-            you want PassportParking to become.
-        </p>
-    </section>
+    <!-- Location -->
+    <label>Location</label>
+    <input type="text" placeholder="">
 
-    <footer>
-        © 2026 PassportParking — All Rights Reserved
-    </footer>
+    <!-- Vehicle Plate -->
+    <label>Vehicle Plate Number</label>
+    <input type="text" placeholder="">
+
+    <!-- State / Province -->
+    <label>State or Province</label>
+    <select>
+        <option value="">Select State</option>
+    </select>
+
+    <!-- Duration -->
+    <label>Duration</label>
+    <select>
+        <option value="">Select Duration</option>
+    </select>
+
+    <!-- Payment Summary -->
+    <div class="summary-box">
+        <h3>Payment Summary</h3>
+        <div>Parking Fee: <strong>$0.00</strong></div>
+        <div>Convenience Fee: <strong>$0.00</strong></div>
+        <div>Total: <strong>$0.00</strong></div>
+        <small>All applicable taxes and fees included</small>
+    </div>
+
+    <!-- Receipt Email -->
+    <label>Receipt Email *</label>
+    <input type="email" placeholder="">
+
+    <button>Pay with Card</button>
+
+</div>
 
 </body>
 </html>
